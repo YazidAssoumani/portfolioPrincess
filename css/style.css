@@ -15,6 +15,18 @@
 
     i {font-style: inherit}
 
+    button {
+        /* BOX & BORDER */
+            border: none;
+            box-shadow: none; 
+        /* BOX & BORDER */
+        /* COLOR */
+            color: inherit;
+            background-color: inherit;
+        /* COLOR */
+        cursor: pointer;
+    }
+
     /* -------------------------- FONTS TO USE ---------------------------- */
     @font-face {
         font-family: "Montserrat";
@@ -93,6 +105,8 @@
 ********************************* BASE SETTINGS **********************************
 *********************************************************************************/
 
+html {scroll-behavior: smooth}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -114,30 +128,113 @@ h2 {
         background-image: url(../img/bg.jpg)
     }
 
-    #navigation, #profile
-    {background-color: rgba(0, 0, 0, 0.6)}
+    .dark-overlay {
+        padding-top: 15px; 
+        background-color: rgba(0, 0, 0, 0.6)
+    }
 
     /* -------------- NAVIGATION ------------- */
     #navigation {
-        /* FLEX */
-            display: flex;
-            justify-content: space-between;
-        /* FLEX */
-        /* TEXT */
-            font-size: 2em;
-            font-weight: bold;
-            text-transform: uppercase;
-        /* TEXT */
-        padding: 65px 35px
+        font-size: 2em;
+        font-weight: bold;
+        text-transform: uppercase
     }
 
-    nav .display {display: none}
-    /* -------------- NAVIGATION -------------- */
+    #bar-nav {
+        /* FLEX */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        /* FLEX */
+        padding: 10px 0
+    }
+
+    #logo, #menu-burger {text-align: center}
+
+    #logo {
+        flex: 1 0 200px;
+        padding: 10px 0;
+    }
+
+    /* .clear {flex: 2} */
+
+    #menu-burger {
+        flex: 1 0 100px;    
+    }
+
+    #menu-burger i {
+        font-size: 60px;
+    }
+
+    #cross {display: none}
+/* ------------------------------------------- */
+    #menu #links {
+        flex: 1;
+        /* FLEX */
+            display: flex;
+            flex-direction: column;
+        /* FLEX */
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    #links li {
+        flex: 1;
+        /* FLEX */
+            display: flex;
+            justify-content: center
+        /* FLEX */
+    }
+
+    #links a {
+        flex: 1;
+        /* TEXT */
+            color: #f2f2f2;
+            text-align: center;
+        /* TEXT */
+        padding: 20px 0px;
+        background-color: rgba(38, 38, 38, 0.6)
+    }
+
+    #links a:hover {
+        color: #262626;
+        background-color: rgba(242, 242, 242, 0.6)
+    }
+
+    .none {display: none}
+
+    .flex {display: flex}
+
+    .sticky {
+        top: 0;
+        width: 100%;
+        color: #262626;
+        position: fixed;
+        background-color: rgb(242, 242, 242)
+    }
+
+    .sticky #links a {
+        flex: 1;
+        /* TEXT */
+            color: #262626;
+            text-align: center;
+        /* TEXT */
+        padding: 20px 0px;
+        background-color: rgba(242, 242, 242, 0.6)
+    }
+
+    .sticky #links a:hover {
+        text-decoration: underline;   
+    }
+
+    /* :target {padding-top: 300px} */
 
     /* --------------- PROFILE --------------- */
     #profile {
         text-align: center;
-        padding: 50px 0 250px
+        padding: 85px 0 125px;
     }
     
     h1 {
@@ -175,7 +272,6 @@ h2 {
     }
 
     .icon .fab {font-size: 1.4em}
-    /* --------------- PROFILE --------------- */
 /***************************************************
 ********************** HEADER **********************
 ***************************************************/

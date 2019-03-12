@@ -8,17 +8,20 @@
 </head>
 <body>
     <header>
-        <section id="navigation">
-            <div id="logo">Princess</div>
-            <nav>
-                <div id="menu-burger">
-                    <div></div>
-                    <div>
-                        <a href="#" onclick="menuBurger()"><i id="burger-bars" class="fas fa-bars"></i></a>
+        <div class="dark-overlay">
+            <nav id="navigation">
+                <div id="bar-nav">
+                    <div id="logo">Princess</div>
+                    <div class="clear"></div>
+                    <div id="menu-burger">
+                        <button onclick="menuBurger()">
+                            <i id="burger" class="fas fa-bars"></i>
+                            <i id="cross" class="fas fa-times"></i>
+                        </button>
                     </div>
                 </div>
-                <div id="menu" class="display">
-                    <ul id="menu-bars">
+                <div id="menu" class="none">
+                    <ul id="links">
                         <li>
                             <a href="index.html">Home</a>
                         </li>
@@ -43,33 +46,33 @@
                     </ul>
                 </div>
             </nav>
-        </section>
-        <section id="profile">
-            <h1>
-                <span class="hello">Hello</span>
-                <span class="presentation">
-                    <i>I Am <span class="bold">Developer</span></i>
-                    <i>|</i>
-                </span>
-            </h1>
-            <div id="social-networks">
-                <div class="icon">
-                    <i class="fab fa-facebook-f"></i>
+            <section id="profile">
+                <h1>
+                    <span class="hello">Hello</span>
+                    <span class="presentation">
+                        <i>I Am <span class="bold">Developer</span></i>
+                        <i>|</i>
+                    </span>
+                </h1>
+                <div id="social-networks">
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-behance"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
                 </div>
-                <div class="icon">
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <div class="icon">
-                    <i class="fab fa-linkedin-in"></i>
-                </div>
-                <div class="icon">
-                    <i class="fab fa-behance"></i>
-                </div>
-                <div class="icon">
-                    <i class="fab fa-youtube"></i>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </header>
 
     <main>
